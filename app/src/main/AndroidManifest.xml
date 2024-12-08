@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IsCollection"
+        tools:targetApi="31">
+
+        <!-- Aktivitas Utama -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <!-- Menentukan Aktivitas yang Diluncurkan Saat Aplikasi Dibuka -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Aktivitas Tambahan: Catatan -->
+        <activity
+            android:name="catatan.CatatanAddActivity"
+            android:exported="true" />
+        <activity
+            android:name="catatan.CatatanAddFormActivity"
+            android:exported="true"/>
+        <activity
+            android:name="pemasukan.Pemasukkan"
+            android:exported="true"/>
+        <activity
+            android:name="pengeluaran.Pengeluaran"
+            android:exported="true"/>
+        <activity
+            android:name="pemasukan.TambahData"
+            android:exported="true"/>
+    </application>
+
+</manifest>
